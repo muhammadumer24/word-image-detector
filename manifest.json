@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Megazord",
+  "version": "4.2024",
+  "description": "Designer ID Structures",
+  "permissions": ["contextMenus", "activeTab", "scripting", "storage"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "image/s16.png",
+    "48": "image/s48.png",
+    "128": "image/s128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
